@@ -40,6 +40,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.data.AdoptionCase
@@ -51,6 +53,7 @@ import com.example.androiddevchallenge.ui.theme.TitleTextStyle
 fun PetCellView(adoptionCase: AdoptionCase, onPetSelected: (String) -> Unit) {
     Row(
         modifier = Modifier
+            .semantics { testTag = "cell" }
             .clickable {
                 onPetSelected(adoptionCase.id)
             }

@@ -15,7 +15,11 @@
  */
 package com.example.androiddevchallenge
 
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.performClick
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Rule
 import org.junit.Test
@@ -32,7 +36,8 @@ class ExampleInstrumentedTest {
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun sampleTest() {
-        // Add instrumented tests here
+    fun showPetScreenTest() {
+        composeTestRule.onAllNodesWithTag("cell")[0].performClick()
+        composeTestRule.onNodeWithTag("pet_details_view").assertIsDisplayed()
     }
 }

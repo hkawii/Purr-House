@@ -23,6 +23,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.data.AdoptionCase
 import com.example.androiddevchallenge.ui.theme.BackgroundColor
@@ -32,6 +34,7 @@ import com.example.androiddevchallenge.ui.theme.PrimaryColor
 fun PetDetailsCardView(case: AdoptionCase) {
     Column(
         modifier = Modifier
+            .semantics { testTag = "pet_details_view" }
             .background(color = BackgroundColor)
             .fillMaxSize()
     ) {
