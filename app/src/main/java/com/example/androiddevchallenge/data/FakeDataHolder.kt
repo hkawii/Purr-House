@@ -20,57 +20,57 @@ import com.example.androiddevchallenge.R
 val FakePetsRequest: List<AdoptionCase> = listOf(
     AdoptionCase(
         id = "1",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat1),
+        pet = Pet("Kitty", 1.0, "Female", 2.0, R.drawable.cat1),
         petOwner = PetOwner("Adam", "01001001001"),
         isFavourite = true,
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "2",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat2),
+        pet = Pet("Luccy", 1.5, "Male", 1.5, R.drawable.cat2),
         petOwner = PetOwner("Adam", "01001001001"),
         isFavourite = true,
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "3",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat3),
+        pet = Pet("Bella", 1.0, "Female", 3.0, R.drawable.cat3),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "4",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat4),
+        pet = Pet("Leo", 2.0, "Male", 2.0, R.drawable.cat4),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "5",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat1),
+        pet = Pet("Milo", 3.0, "Female", 1.75, R.drawable.cat1),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "6",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat2),
+        pet = Pet("Jack", 1.5, "Male", 1.8, R.drawable.cat2),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "7",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat3),
+        pet = Pet("Kitty", 1.0, "Female", 1.3, R.drawable.cat3),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "8",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat4),
+        pet = Pet("Luccy", 2.0, "Male", 1.75, R.drawable.cat4),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     ),
     AdoptionCase(
         id = "9",
-        pet = Pet("Kitty", 1.0, "Female", 1.0, R.drawable.cat1),
+        pet = Pet("Leo", 3.0, "Female", 1.5, R.drawable.cat1),
         petOwner = PetOwner("Adam", "01001001001"),
         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     )
