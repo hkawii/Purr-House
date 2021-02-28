@@ -15,6 +15,8 @@
  */
 package com.example.androiddevchallenge.screens.pet_details_screen
 
+import android.view.MotionEvent
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,9 +33,13 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -83,26 +89,46 @@ fun OwnerDetailsView(case: AdoptionCase) {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.BottomCenter
+        AdoptButtonView()
+    }
+}
+
+@Composable
+fun AdoptButtonView(){
+
+    val selected = remember { mutableStateOf(false) }
+    val scale = animateFloatAsState(if (selected.value) 1.5f else 1f)
+
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.BottomCenter
+    ) {
+
+        Button(
+            onClick = {
+            },
+            shape = RoundedCornerShape(20.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .scale(scale.value)
+                .pointerInteropFilter {
+                    when (it.action) {
+                        MotionEvent.ACTION_DOWN -> { selected.value = true }
+                        MotionEvent.ACTION_UP  -> { selected.value = false
+                        }
+                    }
+                    true
+                }
         ) {
-            Button(
-                onClick = {
-                },
-                shape = RoundedCornerShape(20.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(
-                    text = "Adopt Now",
-                    style = TextStyle(
-                        color = Color.White,
-                        textAlign = TextAlign.Center,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp
-                    )
+            Text(
+                text = "Adopt Now",
+                style = TextStyle(
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
                 )
-            }
+            )
         }
     }
 }
