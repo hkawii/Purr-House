@@ -94,7 +94,7 @@ fun OwnerDetailsView(case: AdoptionCase) {
 }
 
 @Composable
-fun AdoptButtonView(){
+fun AdoptButtonView() {
 
     val selected = remember { mutableStateOf(false) }
     val scale = animateFloatAsState(if (selected.value) 1.5f else 1f)
@@ -114,7 +114,8 @@ fun AdoptButtonView(){
                 .pointerInteropFilter {
                     when (it.action) {
                         MotionEvent.ACTION_DOWN -> { selected.value = true }
-                        MotionEvent.ACTION_UP  -> { selected.value = false
+                        MotionEvent.ACTION_UP -> {
+                            selected.value = false
                         }
                     }
                     true

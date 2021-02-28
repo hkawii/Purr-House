@@ -55,7 +55,7 @@ fun LikeButtonView(isPetLiked: Boolean, onLikeClicked: () -> Unit) {
             .pointerInteropFilter {
                 when (it.action) {
                     MotionEvent.ACTION_DOWN -> { selected.value = true }
-                    MotionEvent.ACTION_UP  -> {
+                    MotionEvent.ACTION_UP -> {
                         selected.value = false
                         isLiked.value = !isLiked.value
                     }
